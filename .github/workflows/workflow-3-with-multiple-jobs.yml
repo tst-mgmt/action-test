@@ -6,3 +6,8 @@ jobs: # must be plural
     steps: 
       - name: Say hello
         run: echo "Hello World!!!"
+  my-second-job:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Goodbye from job 2
+        run: echo "Goodbye from job 2!!!"
