@@ -1,0 +1,8 @@
+name: my-workflow
+on: [workflow_dispatch] # manual trigger
+jobs: # must be plural
+  my-first-job: # indented, belongs jo jobs, create your own job name
+    runs-on: ubuntu-22.04 # pick a specific version, rather than 'latest' for things you rely on keeping working
+    steps: 
+      - name: Say hello
+        run: echo "Hello World!!!"
