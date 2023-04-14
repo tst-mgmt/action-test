@@ -1,13 +1,14 @@
 name: my-reusable-workflow
-on: [workflow_dispatch]
+on:
+  workflow_call:
 jobs:
   my-first-job: # indented, belongs jo jobs, create your own job name
     runs-on: ubuntu-22.04 # pick a specific version, rather than 'latest' for things you rely on keeping working
     steps: 
       - name: Say hello
-        run: echo "Hello World!!!"
+        run: echo "Hello World, in reusalbe workflow!!!"
   my-second-job:
     runs-on: ubuntu-22.04
     steps:
       - name: Goodbye from job 2
-        run: echo "Goodbye from job 2!!!"
+        run: echo "Goodbye from job 2, in reusalbe workflow!!!"
