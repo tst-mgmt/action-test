@@ -5,9 +5,17 @@ on:
       some-input:
         required: false # boolean, true or false
         type: string # string, int, boolean etc.
+      input-2:
+        required: true
+        type: string
 jobs:
   first-job-with-input:
     runs-on: ubuntu-22.04
     steps:
       - name: Use the param
         run: echo ${{ inputs.some-input }}
+  second-job-with-input:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: first step in job 2
+        run: echo ${{ inputs.input-2 }}
