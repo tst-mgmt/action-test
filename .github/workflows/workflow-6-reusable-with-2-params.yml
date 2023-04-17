@@ -1,0 +1,13 @@
+name: workflow-with-2-params
+on: 
+  workflow_call:
+    inputs: # reserved keyword for taking in input from calling workflow
+      some-input:
+        required: false # boolean, true or false
+        type: string # string, int, boolean etc.
+jobs:
+  first-job-with-input:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Use the param
+        run: echo ${{ inputs.some-input }}
