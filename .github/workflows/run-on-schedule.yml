@@ -3,4 +3,10 @@ on:
   schedule:
   # * is a special character in YAML so you have to quote this string
   # Timezone is UTC
-    - cron: '14 10 * * *'
+    - cron: '15 10 * * *'
+jobs: 
+  echo: 
+    runs-on: ubuntu-20.04
+    steps:
+      - name: run from chron
+        run: echo "Timer triggered!"
