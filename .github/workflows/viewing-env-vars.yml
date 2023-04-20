@@ -1,0 +1,5 @@
+name: viewing-env-vars
+on: workflow_dispatch
+jobs:
+  env-vars:
+    runs-on: ubuntu-20.04
