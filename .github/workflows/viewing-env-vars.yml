@@ -3,3 +3,6 @@ on: workflow_dispatch
 jobs:
   env-vars:
     runs-on: ubuntu-20.04
+    steps: 
+      - name: print env vars
+        run: env
