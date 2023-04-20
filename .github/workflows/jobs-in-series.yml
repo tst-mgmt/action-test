@@ -1,1 +1,17 @@
-
+name: jobs-in-series
+on: [workflow_dispatch]
+jobs:
+  job1:
+    runs-on: ununtu-20.04
+    steps:
+      - name: sleep 5 seconds
+        run: sleep 5
+      - name: say hello
+        run: echo "hello!"
+  job2: 
+    runs-on: ununtu-20.04
+    steps:
+      - name: sleep 6 seconds
+        run: sleep 6
+      - name: say goodbye
+        run: echo "goodbye"
