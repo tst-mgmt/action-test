@@ -8,4 +8,4 @@ jobs:
     runs-on: ubuntu-20.04
     steps: 
       - name: push msg
-        run: echo "some output text on push to branch"
+        run: echo "some output text on push to feature branch"
