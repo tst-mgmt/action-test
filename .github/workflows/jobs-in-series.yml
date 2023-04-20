@@ -10,6 +10,7 @@ jobs:
         run: echo "hello!"
   job2: 
     runs-on: ununtu-20.04
+    needs: [job1]
     steps:
       - name: sleep 6 seconds
         run: sleep 6
