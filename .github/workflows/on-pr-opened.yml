@@ -1,0 +1,12 @@
+name: on-pr-opened
+on:
+  pull_request:
+    types: [ opened, edited ]
+    branches: [ 'main', 'feature' ]
+jobs: 
+  run-on-pr-opened:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: pr opened target main
+        run: echo "hello from pr event trigger"
+    
