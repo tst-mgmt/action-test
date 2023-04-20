@@ -1,0 +1,9 @@
+name: run-on-push-to-all-branches
+on: 
+  push:
+jobs: 
+  push-job:
+    runs-on: ubuntu-20.04
+    steps: 
+      - name: push msg
+        run: echo "some output text on push to branch"
