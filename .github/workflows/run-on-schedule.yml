@@ -3,7 +3,7 @@ on:
   schedule:
   # * is a special character in YAML so you have to quote this string
   # Timezone is UTC
-    - cron: '15 10 * * *'
+    - cron: '20 * * * *'
 jobs: 
   echo: 
     runs-on: ubuntu-20.04
