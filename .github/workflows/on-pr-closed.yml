@@ -1,0 +1,11 @@
+name: on-pr-closed
+on:
+  pull_request:
+    types: [ closed ]
+    branches: [ 'main' ]
+jobs: 
+  run-on-pr-opened:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: pr closed
+        run: echo "PR Closed!"
